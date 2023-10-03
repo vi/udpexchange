@@ -2,7 +2,12 @@
 name = "udpexchange"
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/vi/udpexchange"
+license = "MIT/Apache-2.0"
+description = "Small CLI tool for creating simple UDP hubs; small executable size experiment"
 
+categories = ["network-programming", "command-line-utilities"]
+keywords = ["udp","hub","min_sized_rust"]
 
 [dependencies]
 argh = "0.1.12"
@@ -15,3 +20,14 @@ static-alloc = "0.2.4"
 
 [features]
 mini = ["libc"]
+
+
+[profile.release]
+opt-level = "z"
+debug = 0
+lto = true
+debug-assertions = false
+codegen-units = 1
+incremental = false
+panic = 'abort'
+strip = true

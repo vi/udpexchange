@@ -4,7 +4,7 @@
 
 use std::{
     net::{SocketAddr, UdpSocket},
-    time::{Duration, Instant},
+    time::{Duration, Instant}, process::exit,
 };
 
 use argh::FromArgs;
@@ -58,7 +58,7 @@ fn msg(x: &[u8]) {
 fn run(opts: Opts) {
     let Ok(udp) = UdpSocket::bind(opts.listen_addr) else {
         msg(b"Failed to bind or listen the UDP socket\n");
-        std::process::exit(1);
+        exit(1);
     };
     let mut addrs = ConstLru::<SocketAddr, Instant, MAX_CLIENTS, u8>::new();
     let mut buf = [0u8; BUFSIZE];
