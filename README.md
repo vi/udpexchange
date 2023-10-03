@@ -13,9 +13,9 @@ This service may allow DDoS amplification, so should not be run publicly.
 
 ## Small executable size
 
-This project is partly an experiment to create small executables using Rust while having access to libstd and using reasonable command-line arguments parser.
+This project is partly an experiment to create small executables using Rust while having (partial?) access to libstd and using reasonable command-line arguments parser.
 
-   cargo build --release -Zbuild-std=std,panic_abort -Zbuild-std-features=panic_immediate_abort --target=x86_64-unknown-linux-musl --features=mini
+    cargo build --release -Zbuild-std=std,panic_abort -Zbuild-std-features=panic_immediate_abort --target=x86_64-unknown-linux-musl --features=mini
 
 should produce a working 51-kilobyte executable.
 
