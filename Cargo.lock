@@ -3,6 +3,12 @@
 version = 3
 
 [[package]]
+name = "alloc-traits"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6b2d54853319fd101b8dd81de382bcbf3e03410a64d8928bbee85a3e7dcde483"
+
+[[package]]
 name = "argh"
 version = "0.1.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -47,6 +53,12 @@ checksum = "3074f2213cdc7ff9f050a7676e96992831c1e047789becc2d54375ba37e8c728"
 dependencies = [
  "num-traits",
 ]
+
+[[package]]
+name = "libc"
+version = "0.2.148"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9cdc71e17332e86d2e1d38c1f99edcb6288ee11b815fb1a4b049eaa2114d369b"
 
 [[package]]
 name = "num-traits"
@@ -96,6 +108,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "static-alloc"
+version = "0.2.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "570b7e840addf99f80c5b26abba410e21537002316fc82f2747fd87c171e9d7e"
+dependencies = [
+ "alloc-traits",
+]
+
+[[package]]
 name = "syn"
 version = "2.0.37"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -112,6 +133,8 @@ version = "0.1.0"
 dependencies = [
  "argh",
  "const-lru",
+ "libc",
+ "static-alloc",
 ]
 
 [[package]]

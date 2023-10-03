@@ -7,3 +7,11 @@ edition = "2021"
 [dependencies]
 argh = "0.1.12"
 const-lru = "0.2.2"
+
+libc = {version="0.2.148", optional=true }
+
+
+static-alloc = "0.2.4"
+
+[features]
+mini = ["libc"]
