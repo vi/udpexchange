@@ -1,5 +1,5 @@
-
 #![cfg_attr(feature="mini", no_main)]
+extern crate eyra;
 
 
 use std::{
@@ -17,7 +17,7 @@ const MAX_CLIENTS: usize = 64;
 const BUFSIZE: usize = 4096;
 
 #[global_allocator]
-static A: Bump<[u8; 2048]> = Bump::uninit();
+static A: Bump<[u8; 4096]> = Bump::uninit();
 
 /// Simple UDP service which replies to all other known clients
 #[derive(FromArgs)]

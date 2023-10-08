@@ -12,6 +12,7 @@ keywords = ["udp","hub","min_sized_rust"]
 [dependencies]
 argh = "0.1.12"
 const-lru = "0.2.2"
+eyra = "0.16.1"
 
 libc = {version="0.2.148", optional=true }
 
@@ -30,4 +31,4 @@ debug-assertions = false
 codegen-units = 1
 incremental = false
 panic = 'abort'
-strip = true
+strip = false
