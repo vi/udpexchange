@@ -19,7 +19,7 @@ This project is partly an experiment to create small executables using Rust whil
 
 should produce a working 51-kilobyte executable.
 
-Note that hacks activated by `--features=mini` may be unsound and less portable.
+Note that hacks activated by `--features=mini` may be unsound and less portable. Even smaller size is attainable by also using [eyra](https://docs.rs/crate/eyra/latest).
 
 ## Installation
 
