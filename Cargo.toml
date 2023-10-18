@@ -1,6 +1,6 @@
 [package]
 name = "udpexchange"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 repository = "https://github.com/vi/udpexchange"
 license = "MIT/Apache-2.0"
@@ -20,6 +20,7 @@ static-alloc = "0.2.4"
 
 [features]
 mini = ["libc"]
+replay = []
 
 
 [profile.release]

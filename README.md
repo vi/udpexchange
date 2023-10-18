@@ -7,6 +7,8 @@ This program follows the following algorithm:
 3. Return empty datagrams back to sender (pings/keepalives)
 4. Forward non-empty datagrams to each known unexpired address (except of sender).
 
+Optionally, it can remember some recent messages and send them to newly seen clients.
+
 ## Security
 
 This service may allow DDoS amplification, so should not be run publicly.
@@ -30,7 +32,7 @@ Download a pre-built executable from [Github releases](https://github.com/vi/udp
 <details><summary> udpexchange --help output</summary>
 
 ```
-Usage: udpexchange <listen_addr> [-t <timeout>]
+Usage: udpexchange <listen_addr> [-t <timeout>] [-r]
 
 Simple UDP service which replies to all other known clients
 
@@ -39,6 +41,7 @@ Positional Arguments:
 
 Options:
   -t, --timeout     timeout, in seconds, to expire clients.
+  -r, --replay      send recent accumulated messages to newly seen clients
   --help            display usage information
 ```
 </details>
